@@ -1,0 +1,124 @@
+const user1 = {
+    name: "user1",
+    edad: 33,
+    email: "user1@gmail.com"
+}
+const user2 = {
+    name: "user2",
+    edad: 37,
+    email: "user2@gmail.com"
+}
+const user3 = {
+    name: "user3",
+    edad: 39,
+    email: "user3@gmail.com"
+}
+
+//insertar varios objetos
+db.users.insertMany(
+    [
+        {
+            name: "user7",
+            edad: 60,
+            email: "user7@gmail.com"
+        },
+        {
+            name: "user8",
+            edad: 52,
+            email: "user8@gmail.com"
+        },
+        {
+            name: "user9",
+            edad: 5,
+            email: "user9@gmail.com"
+        },
+        {
+            name: "user10",
+            edad: 10,
+            email: "user10@gmail.com"
+        },
+        {
+            name: "user11",
+            edad: 18,
+            email: "user11@gmail.com"
+        }
+    ]
+)
+
+[
+
+    {
+        name: "user12",
+        edad: 65,
+        email: "user12@gmail.com",
+        status:"active"
+    },
+    {
+        name: "user13",
+        edad: 22,
+        email: "user13@gmail.com",
+        status: "active"
+    },
+    {
+        name: "user14",
+        edad: 19,
+        email: "user14@gmail.com",
+        status: "inactive"
+    }
+]
+
+//MQL Mongoose Query Language (lenguaje de consultas de mongo)
+
+//Buscar mayores o igual a 30 y status activo
+
+db.users.find({
+    $and: [
+        {edad: {$gte: 30}},
+        {status: "active"}
+    ]
+})
+
+
+[{ "tipo": "libro",
+"titulo": "Java para todos",
+"ISBN": "987-1-2344-5334-8",
+"editorial": "Anaya",
+"Autor": ["Pepe Caballero", "Isabel
+Sanz", "Timoteo Marino"],
+"capítulos": [
+{"capitulo":1,
+"titulo": "Primeros pasos en Java",
+"longitud": 20
+},
+{"capitulo":2,
+"titulo": "Primeros pasos en Java",
+"longitud": 25
+}
+]
+},
+[{ "tipo": "CD",
+"Artista": "Los piratas",
+"Titulo": "Recuerdos",
+"canciones": [
+{"cancion":1,
+"titulo": "Adiós mi barco",
+"longitud": "3:20"
+},
+{"cancion":2,
+"titulo": "Pajaritos",
+"longitud": "4:15"
+}
+]
+},
+[{ "tipo": "DVD",
+"Titulo": "Matrix",
+"estreno": 1999,
+"actores": [
+"Keanu Reeves",
+"Carry-Anne Moss",
+"Laurence Fishburne",
+"Hugo Weaving",
+"Gloria Foster",
+"Joe Pantoliano"
+]
+}]
